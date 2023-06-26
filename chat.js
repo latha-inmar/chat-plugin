@@ -47,7 +47,7 @@ document.write('</head>');
 document.write('');
 document.write('<body>');
 document.write('  <script type="text/javascript">');
-document.write('    var openEnderContent = "<iframe width=\\\'1080\\\' height=\\\'760\\\' class = \'iframe-cls\' src=\'https://demo.infinitepossibilities.ai/\' frameborder=\'0\' allowfullscreen></iframe>";');
+document.write('    var openEnderContent = "<iframe width=\\\'1080\\\' height=\\\'760\\\' class = \'iframe-cls\' src=\'https://caip-web-app-l3v6ub3yaa-as.a.run.app/\' frameborder=\'0\' allowfullscreen></iframe>";');
 document.write('    function demoOpen() {');
 document.write('      $(document).ready(function () {');
 document.write('        $(\'#iframe-show\').html(openEnderContent);');
