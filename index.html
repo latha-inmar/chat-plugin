@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>PluggedIn</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .floating-section {
+      position: fixed;
+      z-index: 4;
+      bottom: 0;
+    }
+
+    .floating-chat {
+      border-radius: 50%;
+      height: 9vh;
+      aspect-ratio: 1 / 1;
+      animation: 3s linear 0s infinite alternate slidein;
+    }
+
+    @keyframes slidein {
+      from {
+        transform: translateX(100vw) scale(1, 1);
+        -webkit-backface-visibility: hidden;
+      }
+
+      to {
+        transform: translateX(90vw) scale(1, 1);
+        -webkit-backface-visibility: hidden;
+      }
+    }
+
+    .iframe-cls {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 5;
+      width: 28%;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var openEnderContent = "<iframe width=\'1080\' height=\'760\' class = 'iframe-cls' src='https://caip-web-app-l3v6ub3yaa-as.a.run.app/' frameborder='0' allowfullscreen></iframe>";
+    function demoOpen() {
+      $(document).ready(function () {
+        $('#iframe-show').html(openEnderContent);
+      });
+    }
+  </script>
+  <div class="floating-section" onclick=" return demoOpen()">
+    <img src="assets/images/users/chat_img.jpeg" alt="user-img" class="img-fluid floating-chat rounded-circle">
+  </div>
+  <div id="iframe-show"> </div>
+</body>
+
+</html>
